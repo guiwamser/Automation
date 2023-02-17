@@ -1,11 +1,14 @@
 import webbrowser
 import pyautogui as py
 import time
+import threading
+
+
+py.alert("🤖 O CÓDIGO VAI COMEÇAR. NÃO UTILIZE NADA DO COMPUTADOR ATÉ O CÓDIGO FINALIZAR!🤖")
 
 webbrowser.open("https://www.google.com")
 
 time.sleep(1)
-
 
 py.write('externo proway', interval=0.1)
 
@@ -48,14 +51,18 @@ py.click(x=1082, y=642)
 
 py.click(x=1019, y=807)
 
+
+
 # Escreva o comentario sobre a aula aqui
-py.write('''A aula de automação com Python que eu tive foi simplesmente incrível. O instrutor foi muito experiente e habilidoso em seu ofício. Ele apresentou os conceitos de forma clara e organizada, utilizando exemplos reais para tornar o aprendizado mais fácil e compreensível.
 
-O material da aula foi muito bem preparado, com exercícios práticos que ajudaram a consolidar o conhecimento e aplicar as habilidades aprendidas em situações reais. Além disso, o instrutor se mostrou muito atencioso, respondendo a todas as dúvidas e ajudando os alunos a superar qualquer dificuldade que possam ter encontrado durante o curso.
+with open("osmeiabomba.txt", "r", encoding="UTF-8") as arquivo:
+    texto = arquivo.read()
 
-A aula também ofereceu uma ótima visão geral das ferramentas e bibliotecas mais usadas para automação com Python. Os exemplos práticos e as tarefas do curso foram muito úteis para aprender como usar essas ferramentas e bibliotecas na prática.
+    py.write(texto, interval= 0.01)
 
-No geral, a aula de automação com Python que eu fiz foi excelente. Eu definitivamente recomendaria essa aula a qualquer pessoa que esteja procurando aprender a usar o Python para automação de tarefas. Agradeço ao instrutor por ter criado uma experiência de aprendizado tão envolvente e produtiva.''', interval=0.1)
 
-# Esse ultimo click envia a avaliaçãoutomao com Python que eu tive foi siml. O instrutor foi muito experiente e habilidoso eu of
-#py.click(x=1147, y=970)
+# Esse ultimo click envia a avaliação
+py.click(x=1147, y=970)
+
+py.hotkey('windowns')
+py.click(x=33, y=989)
