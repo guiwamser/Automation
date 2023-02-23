@@ -60,9 +60,10 @@ with open("osmeiabomba.txt", "r", encoding="UTF-8") as arquivo:
 
     py.write(texto, interval= 0.01)
 
-
+py.scroll(-750) 
+time.sleep(1)
 # Esse ultimo click envia a avaliação
-py.click(x=1147, y=970)
+#py.click(x=1147, y=970)
 
 py.hotkey('windowns')
 py.click(x=33, y=989)
